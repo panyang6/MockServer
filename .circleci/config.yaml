@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3
+
+    working_directory: /MockServer
+    steps:
+      - checkout
+
+      - run:
+          name: Pip install
+          command: pip install -r requirements.txt
